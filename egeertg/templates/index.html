@@ -1,0 +1,31 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить гостя</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Добавить нового гостя</h1>
+        <a href="{{ url_for('index') }}" class="button">Вернуться на главную</a>
+    </header>
+    <main>
+        <form method="POST">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="surname">Фамилия:</label>
+            <input type="text" id="surname" name="surname" required>
+            
+            <label for="check_in">Дата заезда:</label>
+            <input type="date" id="check_in" name="check_in" required>
+            
+            <label for="check_out">Дата выезда:</label>
+            <input type="date" id="check_out" name="check_out" required>
+            
+            <button type="submit">Добавить</button>
+        </form>
+    </main>
+</body>
+</html>
